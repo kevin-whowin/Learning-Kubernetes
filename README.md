@@ -65,7 +65,7 @@ Run Kubernetes on your local machine
      ```
    - Run the following command to create the Service:
      ```
-     kubectl apply -f nginx-service.yaml
+     kubectl apply -f nginx-deployment.yaml
      ```
 
 5. Access the Nginx server:
@@ -111,3 +111,8 @@ Run Kubernetes on your local machine
      ```
 
 That's it! You now have an Nginx server running in Minikube. You can access it using the URL provided by the `minikube service` command.
+
+## Run the following command to pull down my cat-facts container
+```
+docker pull keenkevin/cat-facts
+```

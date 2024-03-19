@@ -1,20 +1,21 @@
-# This is a Kubernetes manifest (YAML)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: cat-facts
+  labels:
+    app: cat-facts
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
-  template: 
+      app: cat-facts
+  template:
     metadata:
       labels:
-        app: nginx
+        app: cat-facts
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - name: stoic-maxwell
+        image: keenkevin/cat-facts
         ports:
         - containerPort: 80
